@@ -1,0 +1,96 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+background-image: url();
+  background-repeat: no-repeat; /* voorkomt herhaling */
+  background-size: cover;       /* vult het hele scherm */
+  background-position: center;  /* centreren van de afbeelding */
+  margin: 0;
+  padding: 0; 
+}
+.karakter {
+  width: 120px;
+  height: 120px;
+  background-color: pink;
+  border-radius: 50%;
+  margin: 20px auto;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* ogen */
+.oog {
+  width: 20px;
+  height: 25px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+}
+
+.oog:first-child {
+  left: 30px;
+}
+.oog:last-child {
+  right: 30px;
+}
+
+.groei {
+  transform: scale(1.2);
+}
+
+.sleep {
+  transform: translateY(-20px);
+  background-color: lightblue;
+}
+.rave {
+  animation: bounce 0.6s infinite, flash 0.3s infinite;
+}
+
+/* bounce animatie */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+/* kleur animatie */
+@keyframes flash {
+  0% { background-color: red; }
+  50% { background-color: yellow; }
+  100% { background-color: blue; }
+}
+.rave {
+  animation: bounce 0.6s infinite, flash 0.2s infinite;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wit * {
+  color: white;
+}
+
+.klik-object{
+  position: absolute;
+  font-size: 2.1rem;
+  cursor: pointer;
+  user-select: none;
+  display: none;
+}
+
+.wit-tekst {
+  color: white;
+}
+
+button{
+  padding: 10px 20px;
+  font-size: 1.2 rem;
+  border-radius: 8px;
+  cursor: pointer;
+background-color: #ffdeef;
+margin-top: 20px;
+
+}
